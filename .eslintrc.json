@@ -1,0 +1,124 @@
+{
+  "globals": {
+    "JSX": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": ["ts", ".tsx"]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "standard-with-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint/eslint-plugin",
+    "eslint-plugin-tsdoc",
+    "testing-library",
+    "jest-dom"
+  ],
+  "rules": {
+    // space-before-function-paren (DEPRECATED) - Reference: https://typescript-eslint.io/rules/space-before-function-paren/
+    "space-before-function-paren": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
+    // Indent (DEPRECATED) - Reference: https://typescript-eslint.io/rules/indent/
+    "indent": "off",
+    "@typescript-eslint/indent": "off",
+    "tsdoc/syntax": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/no-floating-promises": "warn",
+    "@typescript-eslint/no-misused-promises": "warn",
+    "no-debugger": "off",
+    "no-use-before-define": "off",
+    "no-alert": "off",
+    "no-await-in-loop": "off",
+    "no-return-assign": ["error", "except-parens"],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all"
+      }
+    ],
+    "arrow-body-style": [2, "as-needed"],
+    "no-unused-expressions": [
+      2,
+      {
+        "allowTaggedTemplates": true
+      }
+    ],
+    "no-console": "warn",
+    "import/prefer-default-export": "off",
+    "func-names": "off",
+    "max-len": ["error", { "code": 120 }],
+    "import/extensions": "off",
+    "consistent-return": "off",
+    "react/no-array-index-key": "off",
+    "react/prefer-stateless-function": "off",
+    "react/forbid-prop-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-invalid-void-type": "off",
+    "react/no-unescaped-entities": "off",
+    "react/function-component-definition": "off",
+    "react/require-default-props": "off",
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "**/*.spec.ts",
+          "**/*.spec.tsx",
+          "**/*.stories.ts",
+          "**/*.stories.tsx",
+          "**/*.stories.mdx"
+        ]
+      }
+    ]
+  }
+}
